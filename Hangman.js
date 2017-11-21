@@ -7,25 +7,44 @@ var wins = 0;
 var losses = 0;
 var difficulty;
 
-var easy = { 
-  wordbank: ["cat","dog","fish","hat","ant"],
-  numGuesses: 15,
-  activeWord: "",
-  wrongGuesses: []
+$("#easyGame").click(function() {
+  difficulty = new Easy();
+});
+
+$("#mediumGame").click(function() {
+  difficulty = new Medium();
+});
+
+$("#hardGAme").click(function() {
+  difficulty = new Hard();
+});
+
+var Easy = function()
+{
+  return {
+    wordbank: ["cat","dog","fish","hat","ant"],
+    numGuesses: 15,
+    activeWord: "",
+    wrongGuesses: []
+  };
+}
+
+var Medium = function() {
+  return { 
+    wordbank: ["tailer","donkey","charley"],
+    numGuesses: 12,
+    activeWord: "",
+    wrongGuesses: []
+  }
 };
 
-var medium = { 
-  wordbank: ["tailer","donkey","charley"],
-  numGuesses: 12,
-  activeWord: "",
-  wrongGuesses: []
-};
-
-var hard = { 
-  wordbank: ["abruptly","bagpipes","bandwagon"],
-  numGuesses: 8,
-  activeWord: "",
-  wrongGuesses: []
+var Hard = function() {
+  return {
+    wordbank: ["abruptly","bagpipes","bandwagon"],
+    numGuesses: 8,
+    activeWord: "",
+    wrongGuesses: []
+  } 
 };
 
 var display = {
@@ -51,13 +70,13 @@ var logic = {
       losses++;
     },
     reset: function() {
-      // New word is chosen
-      // wrongGuesses = []
-      
-      // numGuesses resets to difficulty default
-        // easy: 15
-        // medium: 12
-        // hard: 8
+      // Difficulty is selected
+        // if Easy is clicked
+          // difficulty = new Easy();
+        // if Medium is selected
+          // difficulty = new Medium();
+        // if Hard is selected
+          // difficulty = new Hard();
     }
   }
 };
