@@ -35,7 +35,7 @@ var Medium = function() {
     numGuesses: 12,
     activeWord: "",
     wrongGuesses: []
-  }
+  };
 };
 
 var Hard = function() {
@@ -44,7 +44,7 @@ var Hard = function() {
     numGuesses: 8,
     activeWord: "",
     wrongGuesses: []
-  } 
+  }; 
 };
 
 var display = {
