@@ -35,3 +35,60 @@ var easy = {
   }
 };
 
+var medium = { 
+  wordbank: [],
+  numGuesses: ,
+  activeWord: "",
+  wrongGuesses: [],
+  display: {
+    correct: [],
+    wrong: [],
+    update: function() {
+      // Update guesses left
+      $("#guessesLeft").text(numGuesses);
+      // Update wrong guesses
+      $("#wrongGuesses").text(wrongGuesses);
+      // Update 
+    }
+  },
+  logic: {
+
+  },
+  gameOver: {
+    win: function() {
+
+    },
+    lose: function() {
+
+    }
+  }
+};
+
+var hard = { 
+  wordbank: [],
+  numGuesses: ,
+  activeWord: "",
+  wrongGuesses: [],
+  display: {
+    correct: [],
+    wrong: [],
+    update: function() {
+      // Update guesses left
+      $("#guessesLeft").text(numGuesses);
+      // Update wrong guesses
+      $("#wrongGuesses").text(wrongGuesses);
+      // Update 
+    }
+  },
+  logic: {
+
+  },
+  gameOver: {
+    win: function() {
+
+    },
+    lose: function() {
+
+    }
+  }
+};
