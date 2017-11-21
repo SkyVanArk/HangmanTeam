@@ -5,6 +5,7 @@
 
 var wins = 0;
 var losses = 0;
+var difficulty;
 
 var easy = { 
   wordbank: ["cat","dog","fish","hat","ant"],
@@ -50,7 +51,13 @@ var logic = {
       losses++;
     },
     reset: function() {
-
+      // New word is chosen
+      // wrongGuesses = []
+      
+      // numGuesses resets to difficulty default
+        // easy: 15
+        // medium: 12
+        // hard: 8
     }
   }
 };
