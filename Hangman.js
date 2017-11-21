@@ -3,18 +3,23 @@
  * Collaborative Development Edition
  */ 
 
+var wins = 0;
+var losses = 0;
+
 var easy = { 
   wordbank: [],
   numGuesses: 15,
-  wins: 0,
-  losses: 0,
   activeWord: "",
   wrongGuesses: [],
   display: {
     correct: [],
     wrong: [],
     update: function() {
-      // $().
+      // Update guesses left
+      $("#guessesLeft").text(numGuesses);
+      // Update wrong guesses
+      $("#wrongGuesses").text(wrongGuesses);
+      // Update 
     }
   },
   logic: {
@@ -29,3 +34,4 @@ var easy = {
     }
   }
 };
+
