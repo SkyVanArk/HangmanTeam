@@ -10,8 +10,24 @@ var easy = {
   wordbank: ["cat","dog","fish","hat","ant"],
   numGuesses: 15,
   activeWord: "",
-  wrongGuesses: [],
-  display: {
+  wrongGuesses: []
+};
+
+var medium = { 
+  wordbank: ["tailer","donkey","charley"],
+  numGuesses: 12,
+  activeWord: "",
+  wrongGuesses: []
+};
+
+var hard = { 
+  wordbank: ["abruptly","bagpipes","bandwagon"],
+  numGuesses: 8,
+  activeWord: "",
+  wrongGuesses: []
+};
+
+var display = {
     correct: [],
     wrong: [],
     update: function() {
@@ -21,10 +37,9 @@ var easy = {
       $("#wrongGuesses").text(wrongGuesses);
       // Update 
     }
-  },
-  logic: {
-
-  },
+};
+  
+var logic = {
   gameOver: {
     win: function() {
       this.reset();
@@ -35,64 +50,6 @@ var easy = {
       losses++;
     },
     reset: function() {
-
-    }
-  }
-};
-
-var medium = { 
-  wordbank: ["tailer","donkey","charley"],
-  numGuesses: 12,
-  activeWord: "",
-  wrongGuesses: [],
-  display: {
-    correct: [],
-    wrong: [],
-    update: function() {
-      // Update guesses left
-      $("#guessesLeft").text(numGuesses);
-      // Update wrong guesses
-      $("#wrongGuesses").text(wrongGuesses);
-      // Update 
-    }
-  },
-  logic: {
-
-  },
-  gameOver: {
-    win: function() {
-
-    },
-    lose: function() {
-
-    }
-  }
-};
-
-var hard = { 
-  wordbank: ["abruptly","bagpipes","bandwagon"],
-  numGuesses: 8,
-  activeWord: "",
-  wrongGuesses: [],
-  display: {
-    correct: [],
-    wrong: [],
-    update: function() {
-      // Update guesses left
-      $("#guessesLeft").text(numGuesses);
-      // Update wrong guesses
-      $("#wrongGuesses").text(wrongGuesses);
-      // Update 
-    }
-  },
-  logic: {
-
-  },
-  gameOver: {
-    win: function() {
-
-    },
-    lose: function() {
 
     }
   }
