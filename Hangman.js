@@ -7,7 +7,7 @@ var wins = 0;
 var losses = 0;
 
 var easy = { 
-  wordbank: [],
+  wordbank: ["cat","dog","fish","hat","ant"],
   numGuesses: 15,
   activeWord: "",
   wrongGuesses: [],
@@ -27,17 +27,22 @@ var easy = {
   },
   gameOver: {
     win: function() {
-
+      this.reset();
+      wins++;
     },
     lose: function() {
+      this.reset();
+      losses++;
+    },
+    reset: function() {
 
     }
   }
 };
 
 var medium = { 
-  wordbank: [],
-  numGuesses: ,
+  wordbank: ["tailer","donkey","charley"],
+  numGuesses: 12,
   activeWord: "",
   wrongGuesses: [],
   display: {
@@ -65,8 +70,8 @@ var medium = {
 };
 
 var hard = { 
-  wordbank: [],
-  numGuesses: ,
+  wordbank: ["abruptly","bagpipes","bandwagon"],
+  numGuesses: 8,
   activeWord: "",
   wrongGuesses: [],
   display: {
